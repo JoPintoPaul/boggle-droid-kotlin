@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.GridView
+import android.widget.TextView
 import kotlinx.android.synthetic.main.grid_square.view.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val textView: TextView = findViewById(R.id.button)
 
         val squares: List<Die> = listOf(
                 Die(listOf(Square("A"), Square("T"), Square("T"), Square("O"), Square("W"), Square("O"))),
@@ -45,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 }
 
 class GridAdapter(context: Context, var squares: List<Square>) : BaseAdapter() {
-    var context: Context? = context
+    private val context: Context? = context
 
     override fun getCount(): Int {
         return squares.size
@@ -62,8 +65,8 @@ class GridAdapter(context: Context, var squares: List<Square>) : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val square = this.squares[position]
 
-        var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        var gridView = inflator.inflate(R.layout.grid_square, null)
+        val inflater = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val gridView = inflater.inflate(R.layout.grid_square, null)
         gridView.tvName.text = square.letter!!
 
         return gridView
