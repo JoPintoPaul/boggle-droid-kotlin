@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#fffffb</color>
-    <color name="screenBackground">#fffffb</color>
-    <color name="buttonBackground">#FAFFD3</color>
+    <color name="screenBackground">#fff8dc</color>
+    <color name="buttonBackground">#ffefd5</color>
+    <color name="gridBackground">#a0522d</color>
 </resources>

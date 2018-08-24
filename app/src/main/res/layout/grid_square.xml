@@ -3,7 +3,7 @@
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="150dp"
               android:layout_height="wrap_content"
-              android:background="#ddd"
+              android:background="@color/buttonBackground"
               android:gravity="center"
               android:orientation="vertical"
               android:padding="15dp">
@@ -13,8 +13,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Letter"
+            android:text="@string/letter"
             android:textSize="20sp"
+            android:padding="5dp"
             android:background="@color/buttonBackground"/>
 
 </LinearLayout>

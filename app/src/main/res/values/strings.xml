@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BoggleDroid</string>
     <string name="boggle_it">Boggle It!</string>
+    <string name="letter">Letter</string>
 </resources>
